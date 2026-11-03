@@ -198,6 +198,74 @@ padding:10px 4px calc(10px + env(safe-area-inset-bottom));z-index:30
 .mobile-nav span{font-size:21px}
 .section{padding:14px}
 }
+ 
+/* Анимация появления */
+@keyframes rise {
+  from { opacity:0; transform:translateY(35px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* Светящийся фон */
+body {
+  background:
+    radial-gradient(ellipse at 20% 10%, #38208033, transparent 40%),
+    radial-gradient(ellipse at 80% 50%, #124a8830, transparent 45%),
+    #070914;
+  background-attachment:fixed;
+}
+
+/* Плавное появление блоков */
+section {
+  animation:rise .8s ease both;
+}
+
+/* Неоновое свечение */
+.btn {
+  box-shadow:0 0 20px #7257ff44;
+  transition:.3s;
+}
+.btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 0 30px #7257ff88;
+}
+
+/* Красивые карточки */
+.service {
+  position:relative;
+  transition:transform .35s, border-color .35s;
+}
+.service:hover {
+  transform:translateY(-8px) scale(1.015);
+  border-color:#806aff;
+  box-shadow:0 10px 40px #7257ff22;
+}
+
+/* Категории */
+.category {
+  transition:.3s;
+}
+.category:hover {
+  box-shadow:0 0 25px #7257ff33;
+}
+
+/* Мягкие градиенты */
+.hero {
+  background:
+    linear-gradient(180deg,#07091420,#070914ee),
+    url("city-map.png") center/cover;
+}
+
+/* Красивые изображения */
+.servicepic img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .5s;
+}
+.service:hover .servicepic img {
+  transform:scale(1.08);
+}
+ 
 </style>
 </head>
 
